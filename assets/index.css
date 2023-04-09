@@ -1,0 +1,445 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+  
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100vh;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.row,
+.row > div {
+  padding: 0;
+  margin: 0;
+}
+/* ----------------------------- CUSTOM CSS REST ---------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+nav,
+nav ul,
+#registration {
+  display: flex;
+}
+
+nav {
+  height: 54px;
+  padding: 0.75rem 2.375rem;
+}
+
+nav a {
+  color: hsl(0, 0%, 41%);
+}
+
+#navlinks {
+  display: flex;
+}
+
+#navlinks .navbar-brand {
+  padding: 0.3rem 0.75rem;
+  padding-left: 0;
+  margin: 0 12px;
+}
+
+#menumd {
+  margin-right: 20px;
+  padding-top: 4px;
+  display: flex;
+}
+
+#navlinks .nav-li a {
+  display: flex;
+}
+
+#navlinks .nav-li {
+  position: relative;
+}
+
+#navlinks .nav-li:hover .nav-a {
+  color: hsl(0, 0%, 8%);
+}
+
+#navlinks .arrow-btn {
+  margin: auto 2.5px;
+}
+
+#registration {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+nav ul {
+  gap: 1rem;
+  align-items: center;
+}
+
+#registration {
+  gap: 1rem;
+  align-items: center;
+}
+
+#registration > div:hover a {
+  color: hsl(0, 0%, 8%);
+}
+
+nav button {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 6px 16px;
+  outline: none;
+  border: 2px solid hsl(0, 0%, 41%);
+  color: hsl(0, 0%, 41%);
+  transition: all 0.3s ease-in-out;
+}
+
+nav button:hover {
+  transition: all 0.3s ease-in-out;
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+}
+
+.hover-cards {
+  padding: 12px 18px;
+  width: max-content;
+  background-color: #fff;
+  box-shadow: 0px 0px 12px 8px #0000000a;
+  border-radius: 8px;
+}
+
+.hover-cards ul {
+  display: block;
+}
+
+.hover-cards li:hover a {
+  color: hsl(0, 0%, 8%);
+}
+
+.hover-cards span {
+  width: 16px;
+  margin: auto 0;
+  margin-right: 8px;
+}
+
+/* -------------------------- MAIN CONTENT SECTION -------------------------- */
+
+.row {
+  margin: auto;
+}
+
+#contentSection {
+  display: flex;
+  align-items: center;
+}
+#contentSection div {
+  padding: 2rem;
+}
+
+#heroImg {
+  height: 524px;
+}
+
+#heroSection img {
+  height: 100%;
+  margin: 0 auto;
+}
+
+#partners {
+  margin: 2rem 0;
+}
+
+#partners ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+#partners li {
+  display: flex;
+}
+
+#partners li img {
+  margin: auto;
+}
+
+#contentSection button {
+  background-color: hsl(0, 0%, 8%);
+  border-radius: 14px;
+  padding: 12px 28px;
+  outline: none;
+  border: 2px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+#contentSection button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  color: hsl(0, 0%, 8%);
+}
+
+#hamburger {
+  display: none;
+}
+
+#contentSection h1{
+  font-weight: 900;
+}
+
+#contentSection p{
+  color: hsl(0, 0%, 41%);
+}
+
+/* ----------------------------- FOOTER SECTION ----------------------------- */
+footer {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+  width: 100%;
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution {
+  margin: auto 0;
+  text-transform: uppercase;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution a:hover {
+  color: hsl(0, 0%, 41%);
+}
+
+
+/* -------------------------- MEDIA QURIES SECTION -------------------------- */
+@media screen and (min-width: 769px) {
+  .hover-cards {
+    position: absolute;
+    right: 0;
+    display: none;
+  }
+  .hover-cards.show {
+    display: block;
+  }
+
+  #navlinks .nav-li:hover .arrow-btn {
+    transition: 0.4s;
+    transform: rotate(180deg);
+  }
+
+  #contentSection h1{
+    font-size: 3rem;
+  }
+
+  #contentSection h1 span{
+    display: block;
+  }
+
+  #contentSection p{
+    width: 70%;
+    padding: 1.3rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav > #navlinks,
+  nav > #registration {
+    display: none;
+  }
+
+  nav {
+    height: 54px;
+    padding: 0.75rem 1.2rem;
+  }
+
+  #menumd {
+    width: 100%;
+  }
+
+  #hamburger {
+    display: block;
+    margin: auto 0 auto auto;
+  }
+
+  #contentSection div {
+    padding: 0.5rem;
+  }
+  #nav_sm_item ul {
+    display: block;
+  }
+
+  #nav_sm_item ul li a {
+    display: flex;
+  }
+  #navlinks .arrow-btn {
+    margin: auto 8px auto 16px;
+  }
+
+  .offcanvas-body,
+  .offcanvas-header {
+    padding: 1rem 1.6rem;
+    font-size: 20px;
+  }
+
+  #heroImg {
+    height: 100%;
+  }
+
+  #navlinks ul {
+    display: block;
+  }
+
+  #navlinks li {
+    margin: 8px 0;
+  }
+
+  #registration {
+    display: block;
+  }
+
+  #registration div button {
+    margin: 18px 0;
+    width: 100%;
+  }
+
+  #registration div a {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  
+  .arrow-rotate{
+    transition: all 0.3s ease-in-out;
+    transform: rotate(180deg);
+  }
+
+  #heroSection{
+    margin-top: 1rem;
+  }
+
+  #contentSection{
+    margin-top: 22px 0px;
+    text-align: center;
+  }
+
+  #partners{
+    padding: 0;
+  }
+
+  #partners img{
+    height: 50%;
+  }
+
+  footer{
+    margin: 0;
+    padding-bottom: 15px;
+    height: fit-content;
+  }
+
+  .attribution{
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  #contentSection h1{
+    font-size: 2rem;
+  }
+
+  #contentSection p{
+    padding: 12px 0;
+  }
+}
+
+
+@media screen and (min-width: 1921px) and (max-width: 2560px){
+  #heroImg {
+    height: 100%;
+  }
+  nav{
+    padding-top: 4rem;
+  }
+  .navbar-brand{
+    margin-top: 0;
+  }
+  body{
+    font-size: 1.5rem;
+  }
+}
